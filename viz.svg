@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="482" viewBox="0 0 760 482" role="img" aria-label="Step-by-step visual walkthrough">
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="context-stroke"/></marker></defs>
+<rect x="1.0" y="1.0" width="758.0" height="480.0" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+<text x="24.0" y="34.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" fill="#1e293b" text-anchor="start" font-weight="600">Reorder List — split, reverse the tail, interleave</text>
+<circle cx="35.0" cy="74.0" r="11" fill="#2563eb" stroke="#2563eb" stroke-width="1.4"/>
+<text x="35.0" y="78.5" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">1</text>
+<text x="56.0" y="79.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">Rewire 1→2→3→4→5 into 1→5→2→4→3 (outside-in). Random access would make it trivial;</text>
+<text x="56.0" y="98.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">with pointers it's three known moves composed.</text>
+<rect x="24.0" y="114.0" width="54.0" height="36.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="51.0" y="137.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">1</text>
+<line x1="78.0" y1="132.0" x2="102.0" y2="132.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="108.0" y="114.0" width="54.0" height="36.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="135.0" y="137.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">2</text>
+<line x1="162.0" y1="132.0" x2="186.0" y2="132.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="192.0" y="114.0" width="54.0" height="36.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="219.0" y="137.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">3</text>
+<line x1="246.0" y1="132.0" x2="270.0" y2="132.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="276.0" y="114.0" width="54.0" height="36.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="303.0" y="137.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">4</text>
+<line x1="330.0" y1="132.0" x2="354.0" y2="132.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="360.0" y="114.0" width="54.0" height="36.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="387.0" y="137.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">5</text>
+<line x1="408.0" y1="132.0" x2="430.0" y2="132.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="442.0" y="137.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="16" fill="#64748b" text-anchor="middle">∅</text>
+<line x1="24.0" y1="164.0" x2="736.0" y2="164.0" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="35.0" cy="184.0" r="11" fill="#2563eb" stroke="#2563eb" stroke-width="1.4"/>
+<text x="35.0" y="188.5" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">2</text>
+<text x="56.0" y="189.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">Move 1: slow/fast find the middle — split into [1,2,3] and [4,5]. Move 2: reverse</text>
+<text x="56.0" y="208.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">the back half → [5,4].</text>
+<text x="84.0" y="257.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" fill="#64748b" text-anchor="end">front</text>
+<rect x="94.0" y="232.0" width="44.0" height="38.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="116.0" y="256.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">1</text>
+<text x="116.0" y="228.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">0</text>
+<rect x="140.0" y="232.0" width="44.0" height="38.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="162.0" y="256.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">2</text>
+<text x="162.0" y="228.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">1</text>
+<rect x="186.0" y="232.0" width="44.0" height="38.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="208.0" y="256.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">3</text>
+<text x="208.0" y="228.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">2</text>
+<text x="84.0" y="317.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" fill="#64748b" text-anchor="end">back reversed</text>
+<rect x="94.0" y="292.0" width="44.0" height="38.0" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+<text x="116.0" y="316.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">5</text>
+<text x="116.0" y="288.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">0</text>
+<rect x="140.0" y="292.0" width="44.0" height="38.0" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+<text x="162.0" y="316.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">4</text>
+<text x="162.0" y="288.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">1</text>
+<line x1="24.0" y1="342.0" x2="736.0" y2="342.0" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="35.0" cy="362.0" r="11" fill="#2563eb" stroke="#2563eb" stroke-width="1.4"/>
+<text x="35.0" y="366.5" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">3</text>
+<text x="56.0" y="367.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">Move 3: interleave — one from each side alternately. All three moves are earlier</text>
+<text x="56.0" y="386.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="13.5" fill="#1e293b" text-anchor="start">repos (dsa-026, dsa-025, splicing) — composition, not novelty.</text>
+<rect x="24.0" y="402.0" width="54.0" height="36.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="51.0" y="425.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">1</text>
+<line x1="78.0" y1="420.0" x2="102.0" y2="420.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="108.0" y="402.0" width="54.0" height="36.0" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+<text x="135.0" y="425.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">5</text>
+<line x1="162.0" y1="420.0" x2="186.0" y2="420.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="192.0" y="402.0" width="54.0" height="36.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="219.0" y="425.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">2</text>
+<line x1="246.0" y1="420.0" x2="270.0" y2="420.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="276.0" y="402.0" width="54.0" height="36.0" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+<text x="303.0" y="425.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">4</text>
+<line x1="330.0" y1="420.0" x2="354.0" y2="420.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<rect x="360.0" y="402.0" width="54.0" height="36.0" rx="6" fill="#eef2f7" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="387.0" y="425.0" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#1e293b" text-anchor="middle">3</text>
+<line x1="408.0" y1="420.0" x2="430.0" y2="420.0" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="442.0" y="425.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="16" fill="#64748b" text-anchor="middle">∅</text>
+<text x="380.0" y="464.0" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">github.com/Sreenivas-Sadhu-Prabhakara · dsa series</text>
+</svg>
